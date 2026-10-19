@@ -145,7 +145,6 @@ const char* Tab_Name[Tab_Num] = { "常规", "穿越", "植物", "僵尸", "卡槽", "出怪"
 // 此代码模块中包含的函数的前向声明: 
 BOOL				InitInstance(HINSTANCE, int);
 INT_PTR CALLBACK	WndProc(HWND, UINT, WPARAM, LPARAM);
-void				LoadSkin();
 std::shared_ptr<PVZ> judgeProcess(Process& p, std::string& err);
 
 int APIENTRY WinMain(_In_ HINSTANCE hInstance,
@@ -191,7 +190,6 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 	HWND hWnd;
 
 	hInst = hInstance; // 将实例句柄存储在全局变量中
-	LoadSkin();
 
 	hWnd = CreateDialog(hInstance, MAKEINTRESOURCE(IDD_MAIN), NULL, WndProc);
 	SetWindowPos(hWnd, NULL, 500, 100, 345, 475, SWP_NOREPOSITION);
@@ -254,17 +252,6 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 	htabs.Show(Tab_General);
 	SendMessage(hWnd, WM_INIT, 0, 0);
 	return TRUE;
-}
-
-void LoadSkin()
-{
-	static CDllFromMem dll;
-	dll.LoadLibraryFromRs(hInst, "File", MAKEINTRESOURCE(IDR_SKINDLL));
-	auto pLoadSkin = (void(__stdcall*)(void*, int, char*, int, int, int))dll.GetProcAddressFromRs("SkinH_AttachRes");
-	HRSRC hres = FindResource(NULL, MAKEINTRESOURCE(IDR_SKIN), "File");
-	size_t skinsize = SizeofResource(NULL, hres);
-	LPVOID pSkinBuffer = LockResource(LoadResource(NULL, hres));
-	pLoadSkin(pSkinBuffer, skinsize, "", 0, 0, 0);
 }
 
 static void InitGame(HWND hWnd)

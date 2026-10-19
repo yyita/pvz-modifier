@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PVZ_Helper", "PVZ_Helper\PVZ_Helper.vcxproj", "{F37572F2-BA26-4EB3-89D9-912DF3767EEA}"
+Project("{3fca4952-02ce-4dd7-b5a0-6e603cbc9329}") = "PVZ_Helper", "source\PVZ_Helper.vcxproj", "{d7cedd55-3015-4d01-a890-7443b14c87c0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F37572F2-BA26-4EB3-89D9-912DF3767EEA}.Debug|Win32.ActiveCfg = Debug|Win32
-		{F37572F2-BA26-4EB3-89D9-912DF3767EEA}.Debug|Win32.Build.0 = Debug|Win32
-		{F37572F2-BA26-4EB3-89D9-912DF3767EEA}.Release|Win32.ActiveCfg = Release|Win32
-		{F37572F2-BA26-4EB3-89D9-912DF3767EEA}.Release|Win32.Build.0 = Release|Win32
+		{d7cedd55-3015-4d01-a890-7443b14c87c0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{d7cedd55-3015-4d01-a890-7443b14c87c0}.Debug|Win32.Build.0 = Debug|Win32
+		{d7cedd55-3015-4d01-a890-7443b14c87c0}.Release|Win32.ActiveCfg = Release|Win32
+		{d7cedd55-3015-4d01-a890-7443b14c87c0}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

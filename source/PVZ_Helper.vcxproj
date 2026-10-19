@@ -11,22 +11,24 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F37572F2-BA26-4EB3-89D9-912DF3767EEA}</ProjectGuid>
+    <OutDir>$(MSBuildThisFileDirectory)..\generated\bin\$(Configuration)\</OutDir>
+    <IntDir>$(MSBuildThisFileDirectory)..\generated\obj\$(Configuration)\</IntDir>
+    <ProjectGuid>{d7cedd55-3015-4d01-a890-7443b14c87c0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>PVZ_Helper</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -108,12 +110,11 @@
     <ResourceCompile Include="PVZ_Helper.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="PVZ_Helper.ico" />
-    <Image Include="small.ico" />
+    <Image Include="$(MSBuildThisFileDirectory)\resource\icon\application_48.ico" />
+    <Image Include="$(MSBuildThisFileDirectory)\resource\icon\application_16.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Skin" />
-    <None Include="SkinH_EL.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
