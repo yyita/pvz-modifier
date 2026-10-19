@@ -110,8 +110,8 @@
     <ResourceCompile Include="PVZ_Helper.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="$(MSBuildThisFileDirectory)\resource\icon\application_48.ico" />
-    <Image Include="$(MSBuildThisFileDirectory)\resource\icon\application_16.ico" />
+    <Image Include="$(MSBuildThisFileDirectory)\resources\icons\application_48.ico" />
+    <Image Include="$(MSBuildThisFileDirectory)\resources\icons\application_16.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Skin" />
